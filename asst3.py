@@ -11,7 +11,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-df=pd.read_csv('/Users/apple/Desktop/MSBA 325/Week 2/Assignment 2/Haya Mouakeh - Assignment 2 /Salary.csv')
+df=pd.read_csv('Salary.csv')
 #df=pd.DataFrame(df)
 if st.checkbox('Show raw data'):
     st.subheader('Raw data')
@@ -23,7 +23,7 @@ st.plotly_chart(fig)
 fig=px.scatter(df,x='YearsExperience',y='Salary',title='Salary in Canada')
 st.plotly_chart(fig)
 
-MentalHealth=pd.read_csv('/Users/apple/Desktop/MSBA 325/Week 2/Assignment 2/Haya Mouakeh - Assignment 2 /Student Mental health copy.csv')
+MentalHealth=pd.read_csv('Student Mental health copy.csv')
 if st.checkbox('Show data'):
     st.subheader('Raw data')
     st.write(MentalHealth)

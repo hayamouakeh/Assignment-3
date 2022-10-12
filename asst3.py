@@ -48,6 +48,6 @@ else:
         st.write('Thats great!')
     
 
-x_axis=st.selectbox("Select your x-axis:",options=("What is your course?","What is your course?"))
+x_axis=st.selectbox("Select your x-axis:",options=("What is your course?","What is your CGPA?"))
 fig = px.histogram(MentalHealth, x=x_axis,color='Choose your gender',histfunc="count",text_auto=True,title='Course number of each gender',color_discrete_sequence=['indianred'])
 st.plotly_chart(fig)

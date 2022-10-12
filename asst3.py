@@ -17,11 +17,12 @@ if st.checkbox('Show raw data'):
     st.subheader('Raw data')
     st.write(df)
     
-sliders_years= st.slider('Choose your year',max_value=13,min_value=0,value=[0,13],step=1)
-years=df.loc[(df['YearsExperience'] >= sliders_years[0]) & (df['YearsExperience'] <= sliders_years[1])]
+
 fig=px.data.gapminder().query("country=='Canada'")
 fig= px.line(df,x='YearsExperience',y='Salary',title='Salary in Canada')
 st.plotly_chart(fig)
+sliders_years= st.slider('Choose your year',max_value=13,min_value=0,value=[0,13],step=1)
+years=df.loc[(df['YearsExperience'] >= sliders_years[0]) & (df['YearsExperience'] <= sliders_years[1])]
 fig=px.scatter(years,x='YearsExperience',y='Salary',title='Salary in Canada')
 st.plotly_chart(fig)
 
